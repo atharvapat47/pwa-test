@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>PWA Learning Test</title>
-
-	<link rel="manifest" href="manifest.json">
-	<meta name="theme-color" content="#317EFB">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tap the Blob</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#6c63ff" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-	<h1>My First PWA Test</h1>
-	<p>This is running on XAMPP local server.</p>
-
-	<script src="register-sw.js"></script>
-
+<div class="app">
+<h1>Tap the Blob</h1>
+<p class="subtitle">A fun beginner PWA game</p>
+<div class="stats">
+<div class="card">
+<span>Score</span>
+<strong id="score">0</strong>
+</div>
+<div class="card">
+<span>Time</span>
+<strong id="time">30</strong>
+</div>
+<div class="card">
+<span>Best</span>
+<strong id="best">0</strong>
+</div>
+</div>
+<div class="controls">
+<button id="startBtn">Start Game</button>
+<button id="resetBestBtn">Reset Best</button>
+</div>
+<div class="game-area" id="gameArea">
+<div class="message" id="message">Press “Start Game” to play</div>
+<button id="blob" class="blob hidden" aria-label="Tap the blob"></button>
+</div>
+</div>
+<script src="register-sw.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
